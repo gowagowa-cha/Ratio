@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	display: inline-block;
+}
+
+body {
+	font-family: "Ubuntu", sans-serif;
+	background: #f8fbfe;
+}
+
+.container {
+	max-width: 1148px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+}
+
+/* Start header */
+.header {
+	padding-top: 62px;
+}
+.header__menu-link {
+	margin-right: 40px;
+	font-size: 16px;
+	color: #4b5d68;
+	font-weight: 500;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.header__menu-link:hover {
+	color: #212353;
+}
+.header__menu-link--active {
+	color: #212353;
+	font-weight: 800;
+}
+.logo {
+	margin-right: 121px;
+}
+/* End header */
+
+/* Start section storehouse */
+.storehouse__storage {
+	margin-top: 143px;
+	position: relative;
+	max-width: 645px;
+	max-height: 184px;
+}
+.storehouse__storage::before {
+	content: url("../img/bg1.png");
+	position: absolute;
+	bottom: -446px;
+	left: 350px;
+}
+.storehouse__storage-title {
+	font-size: 80px;
+	color: #212353;
+	font-weight: 700;
+}
+.storehouse__storage-text {
+	max-width: 380px;
+	max-height: 120px;
+	color: #4b5d68;
+	font-weight: 500;
+	line-height: 160%;
+	font-size: 18px;
+}
+.storehouse__storage-btn {
+	padding: 16px 37px 15px;
+	border-radius: 50px;
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 160%;
+	background: #9c69e2;
+	border: none;
+}
+@media (max-width: 900px) {
+	.storehouse__storage{
+		margin: 50px 0 0 20px;
+	}
+	.storehouse__storage-title {
+		font-size: 50px;
+	}
+	.header__menu-link {
+		font-size: 30px;
+	}
+	.logo{
+		margin-left: 20px;
+	}
+	.storehouse__storage::before {
+		bottom: -446px;
+    left: 227px;
+	}
+}
+@media (max-width: 605px) {
+	.storehouse__storage{
+		margin-top: 40px;
+	}
+	.storehouse__storage-title {
+		font-size: 60px;
+		width: max-content;
+	}
+	.header__menu-link {
+		font-size: 34px;
+	}
+	.header__menu ul{
+		display: flex;
+	}
+	.storehouse__storage::before {
+		bottom: -534px;
+    left: 0px;
+	}
+}
+@media (max-width: 400px) {
+	.header__menu-link {
+		font-size: 40px;
+	}
+	.storehouse__storage::before {
+		bottom: -534px;
+    left: 0px;
+	}
+	.storehouse__storage{
+		margin-top: 22px;
+	}
+}
+/* End section storehouse */

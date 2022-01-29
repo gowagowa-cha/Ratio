@@ -24,13 +24,13 @@ body {
   max-width: 1148px;
   margin: 0 auto;
   padding: 0 15px;
-  display: flex;
-  align-items: center;
 }
 
 /* Start header */
 .header {
   padding-top: 62px;
+  display: flex;
+  align-items: center;
 }
 .header__menu-link {
   margin-right: 40px;
@@ -53,24 +53,28 @@ body {
 /* End header */
 
 /* Start section storehouse */
-.storehouse__storage {
+.storehouse {
+  display: flex;
   margin-top: 143px;
-  position: relative;
-  max-width: 645px;
-  max-height: 184px;
 }
-.storehouse__storage::before {
-  content: url("../img/bg1.png");
-  position: absolute;
-  bottom: -446px;
-  left: 350px;
+.storehouse__img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 885px 468px;
+  margin-left: -279px;
+  margin-top: 158px;
+}
+.storehouse__storage {
+  min-width: 645px;
 }
 .storehouse__storage-title {
+  max-width: 645px;
   font-size: 80px;
   color: #212353;
   font-weight: 700;
 }
 .storehouse__storage-text {
+  margin-top: 40px;
   max-width: 380px;
   max-height: 120px;
   color: #4b5d68;
@@ -87,53 +91,131 @@ body {
   background: #9c69e2;
   border: none;
 }
-@media (max-width: 900px) {
-  .storehouse__storage {
-    margin: 50px 0 0 20px;
+@media (max-width: 1100px) {
+  .storehouse {
+    display: inline;
   }
-  .storehouse__storage-title {
-    font-size: 50px;
+  .storehouse__storage {
+    min-width: 0px;
+  }
+  .storehouse__img {
+    background-size: 885px 468px;
+    margin-left: 0px;
+    margin-top: -72px;
+  }
+  .storagebank {
+    padding: 0px !important;
+    margin-top: 30px !important;
   }
   .header__menu-link {
-    font-size: 30px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .storehouse__img img {
+    max-width: 600px;
+  }
+  .storehouse__img {
+    margin-top: -2px;
   }
   .logo {
     margin-left: 20px;
+    margin-right: 20px;
   }
-  .storehouse__storage::before {
-    bottom: -446px;
-    left: 227px;
+  .storagebank {
+    flex-direction: column-reverse;
+  }
+  .storagebank__data-title {
+    max-width: 100% !important;
+  }
+  .storagebank__data-text {
+    max-width: 100% !important;
+		margin-bottom: -40px;
   }
 }
 @media (max-width: 605px) {
+  .storehouse__img img {
+    max-width: 400px;
+  }
+  .storehouse__storage-title {
+    font-size: 35px;
+  }
   .storehouse__storage {
     margin-top: 40px;
   }
-  .storehouse__storage-title {
-    font-size: 60px;
-    width: max-content;
-  }
-  .header__menu-link {
-    font-size: 34px;
-  }
+
   .header__menu ul {
     display: flex;
   }
-  .storehouse__storage::before {
-    bottom: -534px;
-    left: 0px;
+	.storagebank__data {
+    padding: 0px 12px 0 12px !important;
   }
 }
 @media (max-width: 400px) {
-  .header__menu-link {
-    font-size: 40px;
+  .storehouse__img img {
+    max-width: 300px;
   }
-  .storehouse__storage::before {
-    bottom: -534px;
-    left: 0px;
+  .storehouse__storage-text {
+    margin-top: 0px;
+    max-width: 380px;
+    max-height: none;
+    line-height: 148%;
+    font-size: 14px;
   }
-  .storehouse__storage {
-    margin-top: 22px;
+  .storehouse__storage-btn {
+    padding: 8px 27px 10px;
+		margin-bottom: 20px;
+  }
+  .storagebank__data-title {
+    font-size: 30px !important;
+  }
+  .storagebank__data-text {
+    font-weight: 300 !important;
+		margin-bottom: -30px;
+  }
+	.header__menu-link {
+    font-size: 15px;
+    margin-right: 24px;
   }
 }
 /* End section storehouse */
+
+/* Start storagebank */
+.storagebank {
+  padding: 125px 0 0 0;
+  min-height: 560px;
+  width: 100%;
+  background: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
+  margin-top: 99px;
+  display: flex;
+}
+.storagebank__img {
+  background-repeat: no-repeat;
+  background-position: 20px 0px;
+  background-size: cover;
+  max-width: 469px;
+  max-height: 496px;
+}
+.storagebank__data {
+  padding: 20px 92px 0 65px;
+}
+.storagebank__data-title {
+  max-width: 475px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #212353;
+}
+.storagebank__data-text {
+  max-width: 474px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4b5d68;
+}
+/* End storagebank */

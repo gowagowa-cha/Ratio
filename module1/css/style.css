@@ -106,6 +106,7 @@ body {
 }
 .storagebank__img {
   background-repeat: no-repeat;
+  /* TODO: px не нужно использовать, когда значение нулевое */
   background-position: 20px 0px;
   background-size: cover;
   max-width: 469px;
@@ -140,6 +141,7 @@ body {
   font-weight: bold;
   font-size: 40px;
   line-height: 130%;
+  /* TODO: свойство align-items без display:flex не имеет смысла */
   align-items: center;
   text-align: center;
   color: #212353;
@@ -159,6 +161,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   margin-bottom: 50px;
+  /* TODO: свойство align-items без display:flex не имеет смысла */
   align-items: flex-start;
   padding-bottom: 10px;
 }
@@ -267,6 +270,7 @@ body {
   width: 645px;
   background: #fff;
   height: 319px;
+  /* TODO: px не нужно использовать, когда значение нулевое */
   box-shadow: 0px 20px 0px rgb(140 85 216 / 50%);
   border-radius: 20px;
   display: flex;
@@ -384,6 +388,11 @@ body {
   padding-bottom: 65px;
 }
 .bg {
+  /* TODO: лучше всё это перенести в footer.
+   ** margin заменить на padding
+   ** border-bottom заменить на border-top
+   ** цвет перевести в rgba и задать прозрачность без 'opacity'
+  */
   margin-top: 150px;
   border-bottom: 1px solid #9c69e2;
   opacity: 0.2;
@@ -466,14 +475,17 @@ body {
     display: inline;
   }
   .storehouse__storage {
+  /* TODO: в этом нет смысла */
     min-width: 0px;
   }
   .storehouse__img {
     background-size: 885px 468px;
+    /* TODO: px не нужно использовать, когда значение нулевое */
     margin-left: 0px;
     margin-top: -72px;
   }
   .storagebank {
+    /* TODO: px не нужно использовать, когда значение нулевое */
     padding: 0px;
     margin-top: 30px;
   }
@@ -547,6 +559,7 @@ body {
     display: flex;
   }
   .storagebank__data {
+    /* TODO: px не нужно использовать, когда значение нулевое */
     padding: 0px 12px 0 12px;
   }
   .features__title {
@@ -555,6 +568,7 @@ body {
   }
   .features__items {
     margin-top: 45px;
+    /* TODO: px не нужно использовать, когда значение нулевое */
     padding: 0px;
   }
   .slider__item-1 {
@@ -585,8 +599,10 @@ body {
     max-width: 300px;
   }
   .storehouse__storage-text {
+    /* TODO: px не нужно использовать, когда значение нулевое */
     margin-top: 0px;
     max-width: 380px;
+    /* TODO: лучше использовать initial */
     max-height: none;
     line-height: 148%;
     font-size: 14px;
@@ -599,6 +615,7 @@ body {
     font-size: 30px;
   }
   .storagebank__data-text {
+    /* TODO: здесь px не нужны */
     font-weight: 300px;
     margin-bottom: -30px;
   }
